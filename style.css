@@ -33,6 +33,7 @@ li {
   height: 19px;
   line-height: 1;
   list-style: none;
+  text-transform: capitalize;
 }
 
 .d-flex img {
@@ -60,4 +61,14 @@ li {
 .source {
   text-decoration: none;
   cursor: pointer;
+}
+
+.active {
+  color: rgb(59, 57, 57);
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
 }

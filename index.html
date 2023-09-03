@@ -10,12 +10,13 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <div class="container">
-      <div class="search-input">
+      <form class="search-form">
         <div class="row">
           <div class="col-6">
             <input
@@ -40,43 +41,43 @@
               type="submit"
               value="Current"
               class="form-control btn btn-danger shadow-sm"
-              id="buttonBtn"
+              id="buttonBtn1"
             />
           </div>
         </div>
-      </div>
-      <h1>Myanmar</h1>
+      </form>
+      <h1 id="city"></h1>
       <ul>
-        <li>Sunday 14:36</li>
-        <li>Partly Cloudy</li>
+        <li id="date"></li>
+        <li id="description"></li>
       </ul>
       <div class="row mt-3">
         <div class="col-6">
           <div class="d-flex weather-temperature">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Cloudy icon"
-              class="weather-icon float-left"
-            />
+            <img src="" alt="" id="icon" class="weather-icon float-left" />
 
             <div class="float-left">
-              <span class="temp">27</span>
-              <span class="units"><a href="#">°C</a> |</span>
-              <span class="units"><a href="#">°F</a></span>
+              <span class="temp" id="temperature"></span>
+              <span class="units"
+                ><a href="#" id="celsius" class="active">°C</a> |</span
+              >
+              <span class="units"><a href="#" id="fahrenheit">°F</a></span>
             </div>
           </div>
         </div>
         <div class="col-6">
           <ul>
-            <li>Precipittion: 0%</li>
-            <li>Humidity: 77%</li>
-            <li>Wind: 8 km/h</li>
+            <li>Precipitation: 14%</li>
+            <li>Humidity: <span id="humidity"></span>%</li>
+            <li>Wind: <span id="wind"></span> km/h</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="end">
-      <a href="#" class="source">Open source code by Htin Paw Aye</a>
+      <a href="https://github.com/thihathiha/Weather-Application" class="source"
+        >Open source code by Htin Paw Aye</a
+      >
     </div>
     <script src="script.js"></script>
   </body>
