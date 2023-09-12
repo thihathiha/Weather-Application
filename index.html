@@ -1,83 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Application</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="./style.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="container">
-      <form class="search-form">
-        <div class="row">
-          <div class="col-6">
-            <input
-              type="search"
-              placeholder="Type a city.."
-              autofocus="on"
-              autocomplete="off"
-              class="form-control shadow-sm"
-              id="search1"
-            />
-          </div>
-          <div class="col-3">
-            <input
-              type="submit"
-              value="Search"
-              class="form-control btn btn-primary shadow-sm"
-              id="buttonBtn"
-            />
-          </div>
-          <div class="col-3">
-            <input
-              type="submit"
-              value="Current"
-              class="form-control btn btn-danger shadow-sm"
-              id="buttonBtn1"
-            />
-          </div>
-        </div>
-      </form>
-      <h1 id="city"></h1>
-      <ul>
-        <li>last update: <span id="date"></span></li>
-        <li id="description"></li>
-      </ul>
-      <div class="row mt-3">
-        <div class="col-6">
-          <div class="d-flex weather-temperature">
-            <img src="" alt="" id="icon" class="weather-icon float-left" />
-
-            <div class="float-left">
-              <span class="temp" id="temperature"></span>
-              <span class="units"
-                ><a href="#" id="celsius" class="active">°C</a> |</span
-              >
-              <span class="units"><a href="#" id="fahrenheit">°F</a></span>
+        <form class="search-form">
+            <div class="row">
+                <div class="col-6">
+                    <input type="search" placeholder="Type a city.." autofocus="on" autocomplete="off" class="form-control shadow-sm" id="search1" />
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="Search" class="form-control btn btn-primary shadow-sm" id="buttonBtn" />
+                </div>
+                <div class="col-3">
+                    <input type="submit" value="Current" class="form-control btn btn-danger shadow-sm" id="buttonBtn1" />
+                </div>
             </div>
-          </div>
+        </form>
+        <h1 id="city"></h1>
+        <ul>
+            <li>last update: <span id="date"></span></li>
+            <li id="description"></li>
+        </ul>
+        <div class="row mt-3">
+            <div class="col-6">
+                <div class="d-flex weather-temperature">
+                    <img src="" alt="" id="icon" class="weather-icon float-left" />
+
+                    <div class="float-left">
+                        <span class="temp" id="temperature"></span>
+                        <span class="units">°C </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <ul>
+                    <li>Precipitation: 14%</li>
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                    <li>Wind: <span id="wind"></span> km/h</li>
+                </ul>
+            </div>
         </div>
-        <div class="col-6">
-          <ul>
-            <li>Precipitation: 14%</li>
-            <li>Humidity: <span id="humidity"></span>%</li>
-            <li>Wind: <span id="wind"></span> km/h</li>
-          </ul>
-        </div>
-      </div>
-      <div class="weather-forecast" id="forecast"></div>
+        <div class="weather-forecast" id="forecast"></div>
     </div>
     <div class="end">
-      <a href="https://github.com/thihathiha/Weather-Application" class="source"
-        >Open source code by Htin Paw Aye</a
+        <a href="https://github.com/thihathiha/Weather-Application" class="source">Open source code by Htin Paw Aye</a
       >
     </div>
     <script src="script.js"></script>
